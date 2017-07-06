@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+    <head>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="Panteón Rococó" />
+
+        <!-- Stylesheets
+        ============================================= -->
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="style.css" type="text/css" />
+        <link rel="stylesheet" href="css/dark.css" type="text/css" />
+        <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+        <link rel="stylesheet" href="css/animate.css" type="text/css" />
+        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+        <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+        <link rel="stylesheet" href="css/calendar.css" type="text/css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <link rel="stylesheet" href="css/colors.css" type="text/css" />
+        <link rel="stylesheet" href="css/panteon.css" type="text/css" />
+
+        <!-- JavaScripts
+        ============================================= -->
+        <script type="text/javascript" src="js/jquery.js"></script>
+        <script type="text/javascript" src="js/plugins.js"></script>
+        <script type="text/javascript" src="js/jquery.calendario.js"></script>
+        <script type="text/javascript" src="js/events-data.js"></script>	
+        <script type="text/javascript" src="js/canvas.slider.fade.js"></script>
+        <script type="text/javascript" src="js/sly.min.js"></script>
+
+        <!-- Title
+        ============================================= -->
+        <title>Panteón Rococó</title>
+
+    </head>
+
+    <body class="stretched">
+
+        <!-- Document Wrapper
+        ============================================= -->
+        <div id="wrapper" class="clearfix ">
+
+            <!-- Header
+============================================= -->
+            <header id="header" class="transparent-header semi-transparent dark " data-sticky-class="dark">
+
+                <div id="header-wrap">
+
+                    <div class="container clearfix">
+
+                        <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                        <!-- Logo
+                        ============================================= -->
+                        <div id="logo">
+                            <a href="index.html" class="standard-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="Panteón Rococó Logo"></a>
+                            <a href="index.html" class="retina-logo" data-dark-logo="images/logo.png"><img src="images/logo.png" alt="Panteón Rococó Logo"></a>
+                        </div><!-- #logo end -->
+
+                        <!-- Primary Navigation
+                        ============================================= -->
+                        <nav id="primary-menu">
+
+                            <ul>
+                                <li><a href="#"><div>Home</div></a></li>
+                                <li><a href="about.html"><div>Bio</div></a></li>
+                                <li><a href="#section-contact" data-href="#section-contact"><div>Contact</div></a></li>
+
+                            </ul>    
+
+                        </nav><!-- #primary-menu end -->
+                        <div class="si-sticky visible-md visible-lg" style="margin-top: -180px;">
+                            <a target="_blank" href="https://www.facebook.com/panteonrococo" class="social-icon si-colored si-rounded si-facebook">
+                                <i class="icon-facebook"></i>
+                                <i class="icon-facebook"></i>
+                            </a>
+                            <a target="_blank" href="https://twitter.com/rococotweets" class="social-icon si-colored si-rounded si-twitter">
+                                <i class="icon-twitter"></i>
+                                <i class="icon-twitter"></i>
+                            </a>
+                        </div> 
+
+                        </header><!-- #header end -->
+
+
+
+
+                        <section id="slider" class="slider-parallax swiper_wrapper full-screen clearfix">
+
+                            <div class="swiper-container swiper-parent">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide dark" style="background-image: url('images/slider/1.jpg');"></div>
+                                    <div class="swiper-slide dark" style="background-image: url('images/slider/2.jpg');"></div>
+                                    <div class="swiper-slide dark" style="background-image: url('images/slider/3.jpg');"></div>
+                                    <div class="swiper-slide dark" style="background-image: url('images/slider/4.jpg');"></div>
+                                    <div class="swiper-slide dark" style="background-image: url('images/slider/5.jpg');"></div>
+                                    <div class="swiper-slide dark" style="background-image: url('images/slider/6.jpg');"></div>
+                                </div>
+                                <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
+                                <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
+                            </div>
+
+                            <script>
+                                jQuery(document).ready(function ($) {
+                                    var swiperSlider = new Swiper('.swiper-parent', {
+                                        paginationClickable: false,
+                                        slidesPerView: 1,
+                                        grabCursor: true,
+                                        loop: true,
+                                        speed: 1000,
+                                        progress: true,
+                                        onProgressChange: function (swiper) {
+                                            for (var i = 0; i < swiper.slides.length; i++) {
+                                                var slide = swiper.slides[i];
+                                                var progress = slide.progress;
+                                                var translate = progress * swiper.width;
+                                                var opacity = 1 - Math.min(Math.abs(progress), 1);
+                                                slide.style.opacity = opacity;
+                                                swiper.setTransform(slide, 'translate3d(' + translate + 'px,0,0)');
+                                            }
+                                        },
+                                        onTouchStart: function (swiper) {
+                                            for (var i = 0; i < swiper.slides.length; i++) {
+                                                swiper.setTransition(swiper.slides[i], 0);
+                                            }
+                                        },
+                                        onSetWrapperTransition: function (swiper, speed) {
+                                            for (var i = 0; i < swiper.slides.length; i++) {
+                                                swiper.setTransition(swiper.slides[i], speed);
+                                            }
+                                        },
+                                        onSwiperCreated: function (swiper) {
+                                            $('[data-caption-animate]').each(function () {
+                                                var $toAnimateElement = $(this);
+                                                var toAnimateDelay = $(this).attr('data-caption-delay');
+                                                var toAnimateDelayTime = 0;
+                                                if (toAnimateDelay) {
+                                                    toAnimateDelayTime = Number(toAnimateDelay) + 750;
+                                                } else {
+                                                    toAnimateDelayTime = 750;
+                                                }
+                                                if (!$toAnimateElement.hasClass('animated')) {
+                                                    $toAnimateElement.addClass('not-animated');
+                                                    var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                                    setTimeout(function () {
+                                                        $toAnimateElement.removeClass('not-animated').addClass(elementAnimation + ' animated');
+                                                    }, toAnimateDelayTime);
+                                                }
+                                            });
+                                            SEMICOLON.slider.swiperSliderMenu();
+                                        },
+                                        onSlideChangeStart: function (swiper) {
+                                            $('[data-caption-animate]').each(function () {
+                                                var $toAnimateElement = $(this);
+                                                var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                                $toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
+                                            });
+                                            SEMICOLON.slider.swiperSliderMenu();
+                                        },
+                                        onSlideChangeEnd: function (swiper) {
+                                            $('#slider').find('.swiper-slide').each(function () {
+                                                if ($(this).find('video').length > 0) {
+                                                    $(this).find('video').get(0).pause();
+                                                }
+                                                if ($(this).find('.yt-bg-player').length > 0) {
+                                                    $(this).find('.yt-bg-player').pauseYTP();
+                                                }
+                                            });
+                                            $('#slider').find('.swiper-slide:not(".swiper-slide-active")').each(function () {
+                                                if ($(this).find('video').length > 0) {
+                                                    if ($(this).find('video').get(0).currentTime != 0)
+                                                        $(this).find('video').get(0).currentTime = 0;
+                                                }
+                                                if ($(this).find('.yt-bg-player').length > 0) {
+                                                    $(this).find('.yt-bg-player').getPlayer().seekTo($(this).find('.yt-bg-player').attr('data-start'));
+                                                }
+                                            });
+                                            if ($('#slider').find('.swiper-slide.swiper-slide-active').find('video').length > 0) {
+                                                $('#slider').find('.swiper-slide.swiper-slide-active').find('video').get(0).play();
+                                            }
+                                            if ($('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').length > 0) {
+                                                $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').playYTP();
+                                            }
+
+                                            $('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function () {
+                                                var $toAnimateElement = $(this);
+                                                var toAnimateDelay = $(this).attr('data-caption-delay');
+                                                var toAnimateDelayTime = 0;
+                                                if (toAnimateDelay) {
+                                                    toAnimateDelayTime = Number(toAnimateDelay) + 300;
+                                                } else {
+                                                    toAnimateDelayTime = 300;
+                                                }
+                                                if (!$toAnimateElement.hasClass('animated')) {
+                                                    $toAnimateElement.addClass('not-animated');
+                                                    var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                                    setTimeout(function () {
+                                                        $toAnimateElement.removeClass('not-animated').addClass(elementAnimation + ' animated');
+                                                    }, toAnimateDelayTime);
+                                                }
+                                            });
+                                        }
+                                    });
+
+                                    $('#slider-arrow-left').on('click', function (e) {
+                                        e.preventDefault();
+                                        swiperSlider.swipePrev();
+                                    });
+
+                                    $('#slider-arrow-right').on('click', function (e) {
+                                        e.preventDefault();
+                                        swiperSlider.swipeNext();
+                                    });
+                                });
+                            </script>
+
+                        </section>
+
+
+                        <section id="content" class="">
+
+
+                        <div class="fancy-title title-center title-dotted-border topmargin">
+                                        <h3 class="panteon grande">Banners</h3>
+                        </div>
+
+                        <div class="container ">
+                          <img id="cartel" class="img-responsive" src="images/banners/ruidofest.png" alt="Chania" width="460" height="345"> 
+                        </div>
+<!-- 
+                        <div class="container clearfix">
+                            Efecto Sly
+                            <div class="container">
+                                <div class="scrollbar">
+                                    <div class="handle">
+                                        <div class="mousearea"></div>
+                                    </div>
+                                </div>
+                                <div id="frame">
+                                    <ul class="slidee">
+										 <li>
+											<img id="banner1" src="images/banners/ruidofest.png"  height="600px" >
+										</li>
+                                    </ul>
+                                  </div>
+                                </div>
+                                <script type="text/javascript">                                
+                                    jQuery(function ($) {                                      
+                                      $('#frame').sly({
+                                            horizontal: 1,
+                                            itemNav: "forceCentered",
+                                            dragContent: 1,
+                                            scrollBy: 1,
+                                            cycleBy: 'items',
+                                            cycleInterval: 4000,
+                                            easing: 'linear',
+                                            keyboardNavBy: 'items',
+                                            mouseDragging: 1,
+                                            activateOn: 'click',
+                                            clickBar:1,
+                                            pauseOnHover:1,
+                                            smart: 1,
+                                            swingSpeed: 0.2,
+                                            dragHandle: 1,
+                                            speed: 600,
+                                            scrollBar: $('.scrollbar'),
+                                            clickBar:1,
+                                            dynamicHandle:1,
+                                      });                                      
+                                    });
+                                $(document).ready(function(){
+                                    document.getElementById('banner1').click();
+                                }); 
+                                </script>                            
+                        </div>
+                       -->
+                    </section>
+
+
+                        <!-- Content
+                        ============================================= -->
+                        <section id="content" class="">
+
+                          
+
+                                <div class="container clearfix ">
+
+
+                                    <div class="fancy-title title-center title-dotted-border topmargin">
+                                        <h3 class="panteon grande">RUIDO FEST 2016</h3>
+                                    </div>
+
+                                    <div id="" class="">    
+                                              <div class="ievent clearfix">
+                                                <div class="entry-image  ">
+
+                                                    <div class="entry-date panteon grande ">8TH-10TH<span>July</span></div>
+
+                                                </div>
+                                                <div class="entry-c ">
+                                                    <div class="entry-title center">
+                                                        <h2>Ruido Fest</h2>
+                                                    </div>
+                                                    <ul class="entry-meta pp ">
+                                                        <li><a target="_blank" href="http://ruidofest.com/">@ruidofest</a></li>
+                                                        <li><a target="_blank" href="https://www.google.com/maps/place/Addams%2FMedill+Park/@41.862756,-87.662737,15z/data=!4m2!3m1!1s0x0:0x2698f04d384a02e"><i class="icon-map-marker2"></i>Addams/Medill park, Chicago , IL · USA</a></li>
+                                                    </ul>
+
+                                                    <div class="entry-content nomargin">
+                                                        <a target="_blank" href="https://www.ticketfly.com/purchase/event/1090055" class="btn btn-danger pull-right panteon bgrande">Buy Tickets</a></div>
+                                                </div>
+                                            </div>
+
+                                            </div>
+										<!--	
+                                         <div class="oc-item">
+                                              <div class="ievent clearfix">
+                                                <div class="entry-image ">
+
+                                                    <div class="entry-date panteon grande">19<span>March</span></div>
+
+                                                </div>
+                                                <div class="entry-c">
+                                                    <div class="entry-title center">
+                                                        <h2>Rock Fiesta 2016</h2>
+                                                    </div>
+                                                    <ul class="entry-meta pp ">
+														<li><a target="_blank" href="http://rockfiesta.com/">@rockfiestafest</a></li>
+                                                        <li><a target="_blank" href="https://www.google.com.mx/maps/place/Quartzsite,+Arizona+85346,+EE.+UU./@33.6639771,-114.2870336,12z/data=!3m1!4b1!4m2!3m1!1s0x80d1596416dd727d:0x907998648bdd0b32"><i class="icon-map-marker2"></i>Quartzsite, AZ · USA</a></li>
+                                                    </ul>
+
+                                                    <div class="entry-content nomargin">
+                                                        <a target="_blank" href="http://s3.amazonaws.com/webassets.ticketmob.com/TS/templates/integrations/rockfiesta/demo.html" class="btn btn-danger pull-right panteon bgrande">Buy Tickets</a></div>
+                                                </div>
+                                            </div>
+
+                                            </div>
+                                        </div>  
+  
+
+                                        </div>
+
+-->
+                                    </div>
+                                    <script type="text/javascript">
+
+                                        jQuery(document).ready(function ($) {
+
+                                            var ocEvents = $("#oc-events");
+
+                                            ocEvents.owlCarousel({
+                                                margin: 20,
+                                                nav: true,
+                                                navText: ['<i class="icon-angle-left"></i>', '<i class="icon-angle-right"></i>'],
+                                                autoplay: false,
+                                                autoplayHoverPause: true,
+                                                dots: false,
+                                                responsive: {
+                                                    0: {items: 1},
+                                                    1000: {items: 2}
+                                                }
+                                            });
+
+                                        });
+
+                                    </script>
+
+                               
+                                    <!-- Contact Form
+                                    ============================================= -->
+                                    <div>
+
+                                        <div class="fancy-title title-center title-dotted-border topmargin">
+                                            <h3 class="panteon grande">Contact</h3>
+                                        </div><!--
+                                        <div class="col_four_fifth displaynone">
+
+                                            <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+                                            <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+
+                                                <div class="form-process"></div>
+
+                                                <div class="col_one_third">
+                                                    <label for="template-contactform-name">Name <small>*</small></label>
+                                                    <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+                                                </div>
+
+                                                <div class="col_one_third">
+                                                    <label for="template-contactform-email">Email <small>*</small></label>
+                                                    <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
+                                                </div>
+
+                                                <div class="col_one_third col_last">
+                                                    <label for="template-contactform-phone">Phone</label>
+                                                    <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
+                                                </div>
+
+                                                <div class="clear"></div>
+
+                                                <div class="col_full">
+                                                    <label for="template-contactform-subject">Subject <small>*</small></label>
+                                                    <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
+                                                </div>
+
+
+                                                <div class="clear"></div>
+
+                                                <div class="col_full">
+                                                    <label for="template-contactform-message">Message <small>*</small></label>
+                                                    <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+                                                </div>
+
+                                                <div class="col_full hidden">
+                                                    <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+                                                </div>
+
+                                                <div class="col_full">
+                                                    <button name="submit" type="submit" id="submit-button" tabindex="5" value="Submit" class="button button-3d nomargin">Submit Comment</button>
+                                                </div>
+
+                                            </form>
+
+                                            <script type="text/javascript">
+
+                                                $("#template-contactform").validate({
+                                                    submitHandler: function (form) {
+                                                        $('.form-process').fadeIn();
+                                                        $(form).ajaxSubmit({
+                                                            target: '#contact-form-result',
+                                                            success: function () {
+                                                                $('.form-process').fadeOut();
+                                                                $('#template-contactform').find('.sm-form-control').val('');
+                                                                $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
+                                                                SEMICOLON.widget.notifications($('#contact-form-result'));
+                                                            }
+                                                        });
+                                                    }
+                                                });
+
+                                            </script>
+
+                                        </div><!-- Contact Form End -->
+                                        <div class="contacto">
+                                            <div  class="col_one_third txtcenter">
+                                                <a href="http://www.agenciaovejanegra.com"><img src="images/logooveja.png"></a>
+                                          
+                                        </div>
+                                        <div class="col_one_third txtcenter">
+                                            <p >
+                                                Othon Zapata<br>
+                                                Oveja Negra Booking<br>
+                                                <a class="parra quienes bgris" href="mailto:othon@panteonrococo.us" >othon@panteonrococo.us</a> <br>
+                                                <a class="parra quienes bgris" href="mailto:othon@agenciaovejanegra.com" >othon@agenciaovejanegra.com </a> <br>
+                                                 
+                                                Tel: + 52 (55) 27357212 <br>
+                                                ID: 52*15*85086   
+                                            </p>
+
+                                        </div>
+                                        <div  class="col_one_third txtcenter">
+                                        <a href="http://www.panteonrococo.com"><img src="images/logo.png"></a> 
+                                        </div>
+                                        </div>
+                                        
+                                    </div>
+
+                                    </section><!-- #content end -->
+
+                                    <!-- Footer
+                                    ============================================= -->
+                                    <footer id="footer" class="dark">
+
+                                        <!-- Copyrights
+                                        ============================================= -->
+                                        <div id="copyrights">
+
+                                            <div class="container clearfix">
+
+                                                <div class="col_half">
+                                                    Copyright &copy; Oveja Negra: Booking, Management and Production
+                                                    <div class="copyright-links">All rights reserved</div>
+                                                </div>
+
+                                                <div class="col_half col_last tright">
+                                                    <div class="fright clearfix">
+                                                        <a href="https://www.facebook.com/panteonrococo" target="_blank" class="social-icon si-small si-borderless si-facebook">
+                                                            <i class="icon-facebook"></i>
+                                                            <i class="icon-facebook"></i>
+                                                        </a>
+
+                                                        <a href="https://twitter.com/rococotweets" target="_blank" class="social-icon si-small si-borderless si-twitter">
+                                                            <i class="icon-twitter"></i>
+                                                            <i class="icon-twitter"></i>
+                                                        </a>
+
+                                                    </div>
+
+                                                    <div class="clear"></div>
+
+
+                                                </div>
+
+                                            </div>
+
+                                        </div><!-- #copyrights end -->
+
+                                    </footer><!-- #footer end -->
+
+                                </div><!-- #wrapper end -->
+
+                                <!-- Go To Top
+                                ============================================= -->
+                                <div id="gotoTop" class="icon-angle-up"></div>
+
+                                <!-- Footer Scripts
+                                ============================================= -->
+                                <script type="text/javascript" src="js/functions.js"></script>
+
+                                </body>
+                                </html>
