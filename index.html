@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
     <head>
+        <title>Panteón Rococó</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta name="author" content="Panteón Rococó" />
@@ -31,7 +33,6 @@
 
         <!-- Title
         ============================================= -->
-        <title>Panteón Rococó</title>
 
     </head>
 
@@ -95,7 +96,6 @@
                                     <div class="swiper-slide dark" style="background-image: url('images/slider/3.jpg');"></div>
                                     <div class="swiper-slide dark" style="background-image: url('images/slider/4.jpg');"></div>
                                     <div class="swiper-slide dark" style="background-image: url('images/slider/5.jpg');"></div>
-                                    <div class="swiper-slide dark" style="background-image: url('images/slider/6.jpg');"></div>
                                 </div>
                                 <div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
                                 <div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
@@ -225,56 +225,55 @@
                                         <h3 class="panteon grande">Banners</h3>
                         </div>
 
-                        <div class="container ">
+                       <!--  <div class="container ">
                           <img id="cartel" class="img-responsive" src="images/banners/ruidofest.png" alt="Chania" width="460" height="345"> 
-                        </div>
-<!-- 
-                        <div class="container clearfix">
-                            Efecto Sly
-                            <div class="container">
-                                <div class="scrollbar">
-                                    <div class="handle">
-                                        <div class="mousearea"></div>
-                                    </div>
+                        </div> -->
+
+                        <div class="row">
+                            <div class="col-xs-12 col-md-10 col-md-offset-1 columns">
+                              <div class="owl-carousel">
+                                <div class="item">
+                                    <img class="imgbanner" src="images/banners/1.jpg">
                                 </div>
-                                <div id="frame">
-                                    <ul class="slidee">
-										 <li>
-											<img id="banner1" src="images/banners/ruidofest.png"  height="600px" >
-										</li>
-                                    </ul>
-                                  </div>
+                                <div class="item">
+                                    <img class="imgbanner" src="images/banners/2.jpg">
                                 </div>
-                                <script type="text/javascript">                                
-                                    jQuery(function ($) {                                      
-                                      $('#frame').sly({
-                                            horizontal: 1,
-                                            itemNav: "forceCentered",
-                                            dragContent: 1,
-                                            scrollBy: 1,
-                                            cycleBy: 'items',
-                                            cycleInterval: 4000,
-                                            easing: 'linear',
-                                            keyboardNavBy: 'items',
-                                            mouseDragging: 1,
-                                            activateOn: 'click',
-                                            clickBar:1,
-                                            pauseOnHover:1,
-                                            smart: 1,
-                                            swingSpeed: 0.2,
-                                            dragHandle: 1,
-                                            speed: 600,
-                                            scrollBar: $('.scrollbar'),
-                                            clickBar:1,
-                                            dynamicHandle:1,
-                                      });                                      
-                                    });
-                                $(document).ready(function(){
-                                    document.getElementById('banner1').click();
-                                }); 
-                                </script>                            
+                                <div class="item">
+                                    <img class="imgbanner" src="images/banners/3.jpg">
+                                </div>
+                                <div class="item">
+                                    <img class="imgbanner2" src="images/banners/4.jpg">
+                                </div>
+                                <div class="item">
+                                    <img class="imgbanner" src="images/banners/5.jpg">
+                                </div>
+                                <div class="item">
+                                    <img class="imgbanner2" src="images/banners/6.jpg">
+                                </div>
+                                <div class="item">
+                                    <img class="imgbanner" src="images/banners/7.jpg">
+                                </div>
+                                <div class="item">
+                                    <img class="imgbanner" src="images/banners/8.jpg">
+                                </div>
+                                <div class="item">
+                                    <img class="imgbanner" src="images/banners/9.jpg">
+                                </div>
+                              </div>
+                            </div>
                         </div>
-                       -->
+
+                        <script>
+                        $(document).ready(function() {
+                          $('.owl-carousel').owlCarousel({
+                            items: 4,
+                            margin: 10,
+                            autoHeight: true
+                          });
+                        })
+                    </script>
+
+                      
                     </section>
 
 
@@ -288,31 +287,12 @@
 
 
                                     <div class="fancy-title title-center title-dotted-border topmargin">
-                                        <h3 class="panteon grande">RUIDO FEST 2016</h3>
+                                        <h3 class="panteon grande">NEXT SHOWS</h3>
                                     </div>
 
-                                    <div id="" class="">    
-                                              <div class="ievent clearfix">
-                                                <div class="entry-image  ">
-
-                                                    <div class="entry-date panteon grande ">8TH-10TH<span>July</span></div>
-
-                                                </div>
-                                                <div class="entry-c ">
-                                                    <div class="entry-title center">
-                                                        <h2>Ruido Fest</h2>
-                                                    </div>
-                                                    <ul class="entry-meta pp ">
-                                                        <li><a target="_blank" href="http://ruidofest.com/">@ruidofest</a></li>
-                                                        <li><a target="_blank" href="https://www.google.com/maps/place/Addams%2FMedill+Park/@41.862756,-87.662737,15z/data=!4m2!3m1!1s0x0:0x2698f04d384a02e"><i class="icon-map-marker2"></i>Addams/Medill park, Chicago , IL · USA</a></li>
-                                                    </ul>
-
-                                                    <div class="entry-content nomargin">
-                                                        <a target="_blank" href="https://www.ticketfly.com/purchase/event/1090055" class="btn btn-danger pull-right panteon bgrande">Buy Tickets</a></div>
-                                                </div>
-                                            </div>
-
-                                            </div>
+                                    <div id="" class="text-center">    
+                                        <h3 class="panteon grande">COMING SOON..</h3>
+                                    </div>
 										<!--	
                                          <div class="oc-item">
                                               <div class="ievent clearfix">
@@ -447,7 +427,7 @@
                                                 <a href="http://www.agenciaovejanegra.com"><img src="images/logooveja.png"></a>
                                           
                                         </div>
-                                        <div class="col_one_third txtcenter">
+                                        <div id="section-contact" class="col_one_third txtcenter">
                                             <p >
                                                 Othon Zapata<br>
                                                 Oveja Negra Booking<br>
@@ -460,7 +440,7 @@
 
                                         </div>
                                         <div  class="col_one_third txtcenter">
-                                        <a href="http://www.panteonrococo.com"><img src="images/logo.png"></a> 
+                                        <a href="http://www.panteonrococo.com"><img id="logopanteonfoot" src="images/logo.png"></a> 
                                         </div>
                                         </div>
                                         

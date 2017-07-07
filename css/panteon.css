@@ -69,7 +69,38 @@
 	width: 80% !important;
 }
 
+#logopanteonfoot{
+	max-width: 100px !important;
+}
+.owl-carousel{
+	
+}
+.owl-carousel.owl-loaded {
+    display: block;
+   
+}
+
+.imgbanner{
+	width: 400px;
+}
+
+.imgbanner2{
+	width: 300px !important;
+    margin: 0 auto;
+}
+
+
 @media (min-width: 10px) and (max-width: 600px) {
+
+	.imgbanner2{
+		width: 300px !important;
+	    margin: 0 auto;
+	}
+
+	.owl-carousel.owl-loaded {
+	    display: block;
+	    margin: 0px 0px;
+	}
 
 	.oc-item90{
 		margin: 0 auto;
