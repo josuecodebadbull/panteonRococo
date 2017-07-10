@@ -89,6 +89,10 @@
     margin: 0 auto;
 }
 
+.owl-height{
+	min-height: 640px !important;
+}
+
 
 @media (min-width: 10px) and (max-width: 600px) {
 
